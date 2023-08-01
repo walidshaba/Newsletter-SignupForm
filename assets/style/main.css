@@ -266,6 +266,9 @@ div.img img {
     height: 120px;
     justify-content: space-between;
   }
+  form legend span {
+    transform: translateX(85px);
+  }
   form input {
     height: 40px;
     border-radius: 5px;
@@ -290,6 +293,9 @@ div.img img {
     font-family: var(--boldRoboto);
     font-size: 30px;
     color: var(--darkSlateGrey);
+  }
+  form legend span {
+    transform: translateX(70px);
   }
 
   .left-side form {
@@ -347,6 +353,10 @@ div.img img {
     height: 150px;
     justify-content: space-between;
   }
+
+  form legend span {
+    transform: translateX(100px);
+  }
   form input {
     height: 50px;
     border-radius: 5px;
@@ -358,5 +368,61 @@ div.img img {
   .main-container .right-side img:nth-child(2) {
     display: flex;
     width: 100%;
+  }
+
+  section .success-container {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 0px;
+    background-color: var(--white);
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    padding: 30px 40px;
+    transform: translateY(-100%) scale(0.001);
+    transition: all ease-in-out 0.5s;
+    /* display: none; */
+    top: 0;
+  }
+  section .success-container.active {
+    /* display: flex; */
+    transform: translateY(0px) scale(1);
+  }
+  div.img img {
+    width: 50px;
+  }
+
+  .success-container h1 {
+    font-size: 40px;
+    font-family: var(--boldRoboto);
+    color: var(--darkSlateGrey);
+  }
+
+  .success-container p {
+    font-size: 14px;
+    font-family: var(--regualrRoboto);
+    color: var(--darkSlateGrey);
+  }
+  .success-container p span {
+    font-family: var(--boldRoboto);
+  }
+  .success-container span#dismiss {
+    font-size: 16px;
+    font-family: var(--regualrRoboto);
+    width: 100%;
+    background-color: var(--darkSlateGrey);
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    color: var(--white);
+    cursor: pointer;
+    transition: all ease-in-out 0.35s;
+  }
+
+  .success-container span#dismiss:hover {
+    background-image: linear-gradient(90deg, #ff527b, var(--tomato));
   }
 }
