@@ -52,6 +52,8 @@ section .main-container {
   padding: 20px;
   border-radius: 20px;
   overflow: hidden;
+}
+section .main-container.active {
   display: none;
 }
 .main-container .left-side {
@@ -103,7 +105,12 @@ form legend {
   font-size: 13px;
   color: var(--darkSlateGrey);
 }
-
+form legend span {
+  position: absolute;
+  transform: translateX(160px);
+  color: #ff3333de;
+  display: none;
+}
 form input {
   height: 50px;
   border-radius: 8px;
@@ -114,15 +121,22 @@ form input {
   font-size: 16px;
   transition: all ease-in-out 0.35s;
 }
-
+form input[type='email'].active {
+  color: #ff3333de;
+  background-color: #ff333323;
+  border: 1.5px solid #ff3333de;
+}
 input::placeholder {
   font-size: 16px;
 }
 
 input:focus {
-  outline: 1px solid var(--darkSlateGrey);
+  outline: 1.5px solid var(--darkSlateGrey);
   border: none;
 }
+
+/* input[type='email'].active:focus {
+} */
 
 form input[type='submit'] {
   border: none;
@@ -149,8 +163,14 @@ section .success-container {
   justify-content: space-around;
   flex-direction: column;
   padding: 30px 40px;
+  transform: translateY(-100%) scale(0.001);
+  transition: all ease-in-out 0.5s;
+  /* display: none; */
 }
-
+section .success-container.active {
+  /* display: flex; */
+  transform: translateY(0px) scale(1);
+}
 div.img img {
   width: 50px;
 }
