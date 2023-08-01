@@ -50,10 +50,11 @@ section .main-container {
   align-items: center;
   padding: 20px;
   border-radius: 20px;
+  overflow: hidden;
 }
 .main-container .left-side {
   width: 100%;
-  height: 60%;
+  height: 80%;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -86,4 +87,50 @@ section .main-container {
   margin-bottom: 8px;
   font-family: var(--regualrRoboto);
   color: var(--darkSlateGrey);
+}
+
+.left-side form {
+  display: flex;
+  flex-direction: column;
+  height: 150px;
+  justify-content: space-between;
+}
+
+form legend {
+  font-family: var(--boldRoboto);
+  font-size: 13px;
+  color: var(--darkSlateGrey);
+}
+
+form input {
+  height: 50px;
+  border-radius: 8px;
+  border: 1px solid var(--grey);
+  padding: 0 20px;
+  font-family: var(--regualrRoboto);
+  color: var(--darkSlateGrey);
+  font-size: 16px;
+  transition: all ease-in-out 0.35s;
+}
+
+input::placeholder {
+  font-size: 16px;
+}
+
+input:focus {
+  outline: 1px solid var(--darkSlateGrey);
+  border: none;
+}
+
+form input[type='submit'] {
+  border: none;
+  background-color: var(--darkSlateGrey);
+  font-family: var(--boldRoboto);
+  color: var(--white);
+  font-size: 16px;
+  cursor: pointer;
+  transition: all ease-in-out 0.35s;
+}
+form input[type='submit']:hover {
+  background-image: linear-gradient(145deg, rgb(228, 91, 113), var(--tomato));
 }
