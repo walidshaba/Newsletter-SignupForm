@@ -39,6 +39,7 @@ section {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
 }
 
 section .main-container {
@@ -51,6 +52,7 @@ section .main-container {
   padding: 20px;
   border-radius: 20px;
   overflow: hidden;
+  display: none;
 }
 .main-container .left-side {
   width: 100%;
@@ -132,5 +134,56 @@ form input[type='submit'] {
   transition: all ease-in-out 0.35s;
 }
 form input[type='submit']:hover {
-  background-image: linear-gradient(145deg, rgb(228, 91, 113), var(--tomato));
+  background-image: linear-gradient(90deg, #ff527b, var(--tomato));
+}
+
+/* Beginning sucess Message */
+
+section .success-container {
+  position: absolute;
+  width: 430px;
+  height: 450px;
+  border-radius: 20px;
+  background-color: var(--white);
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  padding: 30px 40px;
+}
+
+div.img img {
+  width: 50px;
+}
+
+.success-container h1 {
+  font-size: 50px;
+  font-family: var(--boldRoboto);
+  color: var(--darkSlateGrey);
+}
+
+.success-container p {
+  font-size: 16px;
+  font-family: var(--regualrRoboto);
+  color: var(--darkSlateGrey);
+}
+.success-container p span {
+  font-family: var(--boldRoboto);
+}
+.success-container span#dismiss {
+  font-size: 16px;
+  font-family: var(--regualrRoboto);
+  width: 100%;
+  background-color: var(--darkSlateGrey);
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+  color: var(--white);
+  cursor: pointer;
+  transition: all ease-in-out 0.35s;
+}
+
+.success-container span#dismiss:hover {
+  background-image: linear-gradient(90deg, #ff527b, var(--tomato));
 }
