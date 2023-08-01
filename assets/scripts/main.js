@@ -27,6 +27,7 @@ form.addEventListener('submit', (e) => {
 });
 
 function dismiss() {
+  form.reset();
   mainPage.classList.remove('active');
   success.classList.remove('active');
 }
